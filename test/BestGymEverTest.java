@@ -53,16 +53,16 @@ public class BestGymEverTest {
     }
     @Test
     public void checkIfCustomerHavePaidInTheLastYearTest(){
-        Customer customer = new Customer("","", LocalDate.now().toString());
+        Customer customer = new Customer("","", "2020-10-05");
         assertTrue(bestGymEver.checkIfCustomerHavePaidInTheLastYear(customer));
     }
     @Test
-    public void checkIfLastPaidDateIsOneYearFromToday(){
-        Customer customer = new Customer("","", LocalDate.now().minusYears(1).toString());
+    public void checkIfLastPaidDateIsOneYearFromTodayTest(){
+        Customer customer = new Customer("","", "2019-10-15");
         assertTrue(bestGymEver.checkIfCustomerHavePaidInTheLastYear(customer));
     }
     @Test
-    public void getCustomerFileForPersonalTrainerTest(){
+    public void getCustomerFileTest(){
         String social = "customers";
         assertTrue(bestGymEver.getCustomerFileForPersonalTrainer(social).exists());
         assertFalse(bestGymEver.getCustomerFileForPersonalTrainer("cust").exists());
