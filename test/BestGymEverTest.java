@@ -58,7 +58,7 @@ public class BestGymEverTest {
     }
     @Test
     public void checkIfLastPaidDateIsOneYearFromTodayTest(){
-        Customer customer = new Customer("","", "2019-10-15");
+        Customer customer = new Customer("","", "2020-10-15");
         assertTrue(bestGymEver.checkIfCustomerHavePaidInTheLastYear(customer));
     }
     @Test
